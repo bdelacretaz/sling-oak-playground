@@ -1,0 +1,15 @@
+[feature name=groovy-console]
+
+[artifacts startLevel=20]
+  org.apache.sling/org.apache.sling.scripting.groovy/1.0.2
+  org.apache.sling/org.apache.sling.scripting.console/1.0.0
+  org.apache.sling/org.apache.sling.commons.json/2.0.20
+  org.codehaus.groovy/groovy-all/2.4.10
+  
+[configurations]
+  # NOT FOR PRODUCTION - allow scripting core to use login admin
+  org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment-scripting
+    whitelist.name="scripting"
+    whitelist.bundles=[
+      "org.apache.sling.scripting.core"
+    ]
