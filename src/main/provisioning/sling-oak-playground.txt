@@ -1,0 +1,40 @@
+#
+#  Licensed to the Apache Software Foundation (ASF) under one
+#  or more contributor license agreements.  See the NOTICE file
+#  distributed with this work for additional information
+#  regarding copyright ownership.  The ASF licenses this file
+#  to you under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance
+#  with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing,
+#  software distributed under the License is distributed on an
+#  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+#  specific language governing permissions and limitations
+#  under the License.
+#
+# sling-oak-playground specific artifacts and settings
+[feature name=sling-oak-playground]
+
+[variables]
+  jackson.version=2.6.6
+  oak.version=1.6.1
+  
+[configurations runModes=oak_norepo]
+  # empty by design - this runmode is meant for providing specific configurations
+  # under ./config at runtime
+  
+[artifacts startLevel=5]
+  joda-time/joda-time/2.8.1
+  
+[artifacts startLevel=15]
+  org.apache.jackrabbit/oak-blob-cloud/${oak.version}
+  com.amazonaws/aws-java-sdk-osgi/1.10.76
+  com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/${jackson.version}
+  com.fasterxml.jackson.core/jackson-annotations/${jackson.version}
+  com.fasterxml.jackson.core/jackson-core/${jackson.version}
+  com.fasterxml.jackson.core/jackson-databind/${jackson.version}
+  

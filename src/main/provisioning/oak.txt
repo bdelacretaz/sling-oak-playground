@@ -81,10 +81,6 @@
     userPrivilegeNames=["jcr:all"]
     groupPrivilegeNames=["jcr:read"]
 
-[configurations runModes=oak_norepo]
-  # empty by design - this runmode is meant for providing specific configurations
-  # under ./config at runtime
-
 [configurations runModes=oak_tar]
   org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
     name="Default\ NodeStore"
