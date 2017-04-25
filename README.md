@@ -3,7 +3,7 @@ Sling Launchpad configured to play with Oak using the Sling Groovy script consol
 
 See Chetan's Groovy script examples at https://gist.github.com/chetanmeh/3748614
 
-Here's a slightly one that works on this setup with the curl loop shown below:
+Here's a slightly modified example that works on this setup with the curl loop shown below:
 
     //Logs in using SlingRepository service and opens a session
     
