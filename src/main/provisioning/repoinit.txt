@@ -24,12 +24,6 @@
   org.apache.sling/org.apache.sling.provisioning.model/1.8.0
 
 [:repoinit]
-    # general
-    create path (sling:OrderedFolder) /content
-    set ACL for everyone
-        allow   jcr:read	on /
-    end
-
     # sling-mapping
     create service user sling-mapping
 
@@ -44,34 +38,8 @@
         allow   jcr:read    on /
     end
 
-    # sling-xss
-    create service user sling-xss
-
-    create path (sling:Folder) /libs/sling/xss
-    create path (sling:Folder) /apps/sling/xss
-
-    set ACL for sling-xss
-        deny    jcr:all     on /
-        allow   jcr:read    on /libs/sling/xss,/apps/sling/xss
-    end
-
-    # sling-i18n
-    create service user sling-i18n
-
-    set ACL for sling-i18n
-        allow   jcr:read    on /
-    end
-
     # sling-jcr-install
     create service user sling-jcr-install
-
-    # used for config OSGi writeback
-    create path (sling:Folder) /apps/sling/install
-
-    set ACL for sling-jcr-install
-        allow	jcr:read	on	/
-        allow	rep:write	on /apps/sling/install
-    end
 
 [configurations]
   org.apache.sling.jcr.repoinit.impl.RepositoryInitializer
