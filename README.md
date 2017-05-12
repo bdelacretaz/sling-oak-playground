@@ -1,7 +1,11 @@
 # sling-oak-playground
-Sling Launchpad configured to play with Oak using the Sling Groovy script console
+Sling Launchpad configured to play with Oak using the Sling Groovy script console.
 
 See Chetan's Groovy script examples at https://gist.github.com/chetanmeh/3748614
+
+Any `.cfg` or `.config` configurations found in the `config` folder are loaded at startup. 
+
+The `examples/configs` folder has example configs, including some with placeholders, for S3 access keys for example.
 
 Here's a slightly modified example that works on this setup with the curl loop shown below:
 
